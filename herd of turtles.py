@@ -19,7 +19,7 @@ jr.shape("triangle")
 jr.color("Rosy Brown")
 jr.speed(5)
 eliza.shape("circle")
-eliza.color("Light Pink")
+eliza.color("black")
 eliza.speed(5)
 
 gary.penup()
@@ -55,14 +55,25 @@ eliza.right(-90)
 eliza.forward(90)
 eliza.right(90)
 eliza.pendown()
-# for i in range(360):
-#     eliza.forward(.75)
-#     eliza.right(.5)
-# eliza.right(90)
-eliza.("arc")
+
+eliza.up()
+eliza.goto(-67, -40)
+eliza.setheading(-60)
+eliza.width(5)
+eliza.down()
+eliza.circle(80, 120)
+
+eliza.fillcolor("black")
+
+for i in range(-35, 105, 70):
+   eliza.up()
+   eliza.goto(i, 35)
+   eliza.setheading(0)
+   eliza.down()
+   eliza.begin_fill()
 
 
-
+eliza.hideturtle()
 
 
 turtle.exitonclick()
